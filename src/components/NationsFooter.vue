@@ -1,8 +1,8 @@
 <template>
   <div id="footer">
-    in11202@naver.com
+     <h4>Email: in11202@naver.com</h4>
     <a href="https://github.com/InJaEE" target="_blank">
-      <i class="fab fa-github"></i>
+      <i class="fab fa-github fa-2x gitBtn"></i>
     </a>
   </div>
 </template>
@@ -18,5 +18,8 @@ export default {
   bottom: 0;
   width: 100%;
   background-color: cornflowerblue;
-};
+}
+.gitBtn {
+  padding: 5px;
+}
 </style>
