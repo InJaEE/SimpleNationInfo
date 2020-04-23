@@ -18,5 +18,6 @@ export default {
 }
 .myEmail {
   margin: 3px 0 3px;
+  font-family: 'Nunito', sans-serif;
 }
 </style>

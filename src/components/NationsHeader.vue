@@ -20,4 +20,7 @@ export default {
 a {
   text-decoration: none;
 }
+h1 {
+  font-family: 'Nunito', sans-serif;
+}
 </style>

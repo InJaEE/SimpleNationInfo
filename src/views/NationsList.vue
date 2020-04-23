@@ -47,13 +47,15 @@ export default {
   flex-wrap: wrap;
   flex-direction: row; 
 }
-
 .nationItem {
   width:200px;
   margin: 0px 15px 30px;
 }
-
 .nationImg {
   margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+  color: #646464;
 }
 </style>
