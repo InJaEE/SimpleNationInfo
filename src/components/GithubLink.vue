@@ -18,4 +18,7 @@ export default {
     bottom: 50px;
     right: 20px;
 };
+a {
+    color: #646464;
+}
 </style>

@@ -19,7 +19,7 @@ export default {
   components: {
     NationsHeader, NationsInput, NationsFooter, GithubLink,
   }
-}
+};
 </script>
 
 <style>
