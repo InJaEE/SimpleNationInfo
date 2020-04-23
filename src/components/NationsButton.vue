@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="git">
-      <a href="https:/github.com/InJaEE/SimpleNationInfo" target="_blank">
+      <a href="https://github.com/InJaEE/SimpleNationInfo" target="_blank" title="Github Link">
         <i class="fab fa-github fa-5x gitBtn"></i>
       </a>
     </div>

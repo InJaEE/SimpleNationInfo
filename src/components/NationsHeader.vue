@@ -18,6 +18,7 @@ export default {
   padding: 5px;
 }
 a {
+  color: black;
   text-decoration: none;
 }
 h1 {
