@@ -2,7 +2,9 @@
   <div>
     <nations-header></nations-header>
     <nations-input></nations-input>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
     <nations-footer></nations-footer>
     <nations-button></nations-button>
   </div>
@@ -25,5 +27,11 @@ export default {
 <style>
 body {
   text-align: center;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
