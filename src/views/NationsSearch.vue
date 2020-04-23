@@ -3,7 +3,7 @@
       <div v-if="nationsList.length !== 0 " class="nationList">
         <div v-for="item in nationsList" :key="item.alpha2Code">
             <div class="nationItem">
-                <router-link :to="`/info/${item.alpha3Code}`" replace>
+                <router-link :to="`/info/${item.alpha3Code}`">
                     <p class="nationImg">
                         <img :src="`https://www.countryflags.io/${item.alpha2Code}/shiny/64.png`" alt="nations.name">
                     </p>
@@ -32,7 +32,6 @@ export default {
                 const inputData = this.$route.params.input.toLowerCase();
                 console.log("@", res.data);
                 console.log("$router: ", this.$router);
-                
                 
                 const searchNation = res.data.filter((value) => {
                     return value.name.toLowerCase().includes(inputData)

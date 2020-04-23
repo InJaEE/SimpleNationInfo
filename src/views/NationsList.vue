@@ -4,7 +4,7 @@
         <div class="nationItem">
           <router-link :to="`info/${nations.alpha3Code}`">
             <p class="nationImg">
-              <img :src="`https://www.countryflags.io/${nations.alpha2Code}/shiny/64.png`" alt="nations.name">
+              <img :src="`https://www.countryflags.io/${nations.alpha2Code}/shiny/64.png`" :alt="nations.name">
             </p>
             {{ nations.name }}
           </router-link>

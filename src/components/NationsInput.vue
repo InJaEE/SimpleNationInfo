@@ -17,7 +17,7 @@ export default {
       if(!this.inputData.trim()){
         alert('No data');
         return;
-      };
+      }
 
       console.log("호출", this.$router);
       //this.$router.push({name: 'search', params: this.inputData});
