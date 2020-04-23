@@ -4,7 +4,7 @@
     <nations-input></nations-input>
     <router-view></router-view>
     <nations-footer></nations-footer>
-    <github-link></github-link>
+    <nations-button></nations-button>
   </div>
 </template>
 
@@ -12,12 +12,12 @@
 import NationsHeader from './components/NationsHeader.vue';
 import NationsInput from './components/NationsInput.vue';
 import NationsFooter from './components/NationsFooter.vue';
-import GithubLink from './components/GithubLink.vue';
+import NationsButton from './components/NationsButton.vue';
 
 export default {
   name: 'App',
   components: {
-    NationsHeader, NationsInput, NationsFooter, GithubLink,
+    NationsHeader, NationsInput, NationsFooter, NationsButton,
   }
 };
 </script>
