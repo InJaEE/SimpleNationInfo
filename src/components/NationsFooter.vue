@@ -1,9 +1,6 @@
 <template>
   <div id="footer">
-     <h4>Email: in11202@naver.com</h4>
-    <a href="https://github.com/InJaEE" target="_blank">
-      <i class="fab fa-github fa-2x gitBtn"></i>
-    </a>
+     <h5 class="myEmail">Email: in11202@naver.com</h5>
   </div>
 </template>
 
@@ -19,7 +16,7 @@ export default {
   width: 100%;
   background-color: cornflowerblue;
 }
-.gitBtn {
-  padding: 5px;
+.myEmail {
+  margin: 3px 0 3px;
 }
 </style>

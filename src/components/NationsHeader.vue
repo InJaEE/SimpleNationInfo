@@ -1,7 +1,7 @@
 <template>
   <div class="header">
       <a href="/nations">
-        <h1>Simple Nations Information</h1>
+        <h1>Simple Nation Information</h1>
       </a>
   </div>
 </template>
