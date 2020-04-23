@@ -26,10 +26,7 @@ export default {
   created(){
     getAllNations()
       .then(res => {
-        console.log("$store", this.$store.state.nationList);
-        
         this.$store.state.nationList = res.data; // 추후 store쪽으로 수정 필요한 코드
-        console.log("#", this.$store.state.nationList);
         this.nationsList = res.data;
       })
       .catch(err => {
