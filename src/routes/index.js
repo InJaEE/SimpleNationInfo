@@ -26,10 +26,10 @@ const router = new VueRouter({
             path:'/search/:input',
             component: NationSearch,
         },
-        /*{
+        {
             path: '*',
-            redirect: '/nations/all',
-        },*/
+            redirect: '/nations',
+        },
     ]
 });
 

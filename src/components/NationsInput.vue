@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { getAllNations } from '../api';
+//import { getAllNations } from '../api';
 export default {
   data(){
     return{
@@ -18,8 +18,7 @@ export default {
         if(!this.inputData.trim()){
           alert('No data');
           return;
-        };
-        
+        }
         this.$store.dispatch('FETCH_SEARCH_NATION', this.inputData);
         /*
         getAllNations()
@@ -38,7 +37,7 @@ export default {
         this.$router.replace(`/search/${this.inputData}`)
           .catch(err => {
             if(err.name != "NavigationDuplicated" ){
-              throw error;
+              throw new Error;
             }
           });
         this.resetData();

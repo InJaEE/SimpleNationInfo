@@ -2,29 +2,43 @@
   <div>
       <div>
         <p>
-          <img :src="`https://www.countryflags.io/${getNation.alpha2Code}/shiny/64.png`" onerror="NONE" alt="getNation.name">
+          <img :src="`https://www.countryflags.io/${getNation.alpha2Code}/shiny/64.png`" :alt="getNation.name">
         </p>
-        <p>
-          Name: {{getNation.name}}
-        </p>
-        <p>
-          Capital: {{getNation.capital}}
-        </p>
-        <p>
-          Region: {{getNation.region}}
-        </p>
-        <p>
-          Native name: {{getNation.nativeName}}
-        </p>
-        <div>
-          Languages
-          <li v-for="item in getNation.languages" :key="item.nId">
-            {{item.nativeName}}
-          </li>
-        </div>
+        <table class="tableStyle">
+          <tbody>
+            <!--{{getNation}}-->
+            <tr>
+              <th>Name</th>
+              <th>{{getNation.name}}</th>
+            </tr>
+            <tr>
+              <th>Capital</th>
+              <th>{{getNation.capital}}</th>
+            </tr>
+            <tr>
+              <th>Region</th>
+              <th>{{getNation.region}}</th>
+            </tr>
+            <tr>
+              <th>NativeName</th>
+              <th>{{getNation.nativeName}}</th>
+            </tr>
+            <tr>
+              <th>Languages</th>
+              <th>
+                <li v-for="item in getNation.languages" :key="item.nId">
+                  {{item.nativeName}}
+                </li>
+              </th>
+            </tr>
+
+
+          </tbody>
+        </table>
+
       </div>
 
-    <i class="fas fa-arrow-left fa-2x fa-spin btn" @click="backToList"></i>
+    <i class="fas fa-arrow-left fa-2x btn" @click="backToList"></i>
   </div>
 </template>
 
@@ -41,8 +55,6 @@ export default {
     },
   },
   created(){
-    console.log(this.$route.params);
-    
     const nationCode = this.$route.params.code;
     this.$store.dispatch('FETCH_NATION', nationCode);
   },
@@ -50,7 +62,22 @@ export default {
 </script>
 
 <style scoped>
+.tableStyle {
+  width: 350px;
+  margin: auto;
+  border: 1px ridge;
+  font-family: inherit;
+}
+th {
+  width: 100px;
+  padding: 10px 10px 10px;
+  border: 1px solid black;
+}
+li {
+  list-style: none;
+  margin: 10px;
+}
 .btn {
   padding: 50px 10px 10px;
-};
+}
 </style>
