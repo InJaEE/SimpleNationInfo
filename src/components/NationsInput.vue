@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { getAllNations } from '../api';
 export default {
   data(){
     return{
@@ -13,19 +14,29 @@ export default {
     };
   },
   methods: {
-    searchNation(){
-      if(!this.inputData.trim()){
-        alert('No data');
-        return;
-      }
+      searchNation(){
+        if(!this.inputData.trim()){
+          alert('No data');
+          return;
+        }
+      getAllNations()
+            .then(res => {
+              const input = this.inputData.toLowerCase();
+              
+              const searchNation = res.data.filter(value => {
+                  return value.name.toLowerCase().includes(input)
+              });
+              this.$store.state.searchNationList = searchNation;
+            })
+            .catch(err => {
+              console.error(err);
+            });
 
-      console.log("호출", this.$router);
-      //this.$router.push({name: 'search', params: this.inputData});
       this.$router.replace(`/search/${this.inputData}`);
       this.resetData();
     },
     resetData(){
-      this.inputData = '';
+      //this.inputData = '';
       this.$refs.input.focus();
     },
   },

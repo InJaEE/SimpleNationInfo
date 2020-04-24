@@ -2,7 +2,7 @@
   <div>
       <div>
         <p>
-          <img :src="`https://www.countryflags.io/${getNation.alpha2Code}/shiny/64.png`" alt="getNation.name">
+          <img :src="`https://www.countryflags.io/${getNation.alpha2Code}/shiny/64.png`" onerror="NONE" alt="getNation.name">
         </p>
         <p>
           Name: {{getNation.name}}

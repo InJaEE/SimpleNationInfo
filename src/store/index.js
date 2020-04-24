@@ -8,10 +8,16 @@ const store = new Vuex.Store({
     state: {
         nationList: [],
         nation: {},
+        searchNationList: [],
     },
     mutations: {
         SET_NATION(state, data){
             state.nation = data;
+        },
+    },
+    getters: {
+        getSearchNationList(state){
+            return state.searchNationList;
         },
     },
     actions: {

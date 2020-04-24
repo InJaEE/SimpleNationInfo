@@ -19,29 +19,12 @@
 </template>
 
 <script>
-import { getAllNations } from '../api';
 export default {
-    data(){
-        return{
-            nationsList: [],
-        };
-    },
-    created(){
-        getAllNations()
-            .then(res => {
-                const inputData = this.$route.params.input.toLowerCase();
-                console.log("@", res.data);
-                console.log("$router: ", this.$router);
-                
-                const searchNation = res.data.filter((value) => {
-                    return value.name.toLowerCase().includes(inputData)
-                });
-                this.nationsList = searchNation;
-            })
-            .catch(err => {
-                console.error(err);
-            });
-    },
+    computed: {
+        nationsList(){
+            return this.$store.getters.getSearchNationList;
+        }
+    }
 };
 </script>
 
