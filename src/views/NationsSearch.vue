@@ -29,8 +29,8 @@ export default {
     created(){
         if(this.nationsList.length === 0){
             const param = this.$route.params.input;
-
-            getAllNations()
+            this.$store.dispatch('FETCH_SEARCH_NATION', param);
+            /*getAllNations()
               .then(res => {
                 const input = param.toLowerCase();
                 
@@ -41,7 +41,7 @@ export default {
               })
               .catch(err => {
                 console.error(err);
-              });
+              });*/
 
         };
     }

@@ -18,7 +18,10 @@ export default {
         if(!this.inputData.trim()){
           alert('No data');
           return;
-        }
+        };
+        
+        this.$store.dispatch('FETCH_SEARCH_NATION', this.inputData);
+        /*
         getAllNations()
               .then(res => {
                 const input = this.inputData.toLowerCase();
@@ -30,7 +33,7 @@ export default {
               })
               .catch(err => {
                 console.error(err);
-              });
+              });*/
 
         this.$router.replace(`/search/${this.inputData}`)
           .catch(err => {
