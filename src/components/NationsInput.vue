@@ -19,21 +19,26 @@ export default {
           alert('No data');
           return;
         }
-      getAllNations()
-            .then(res => {
-              const input = this.inputData.toLowerCase();
-              
-              const searchNation = res.data.filter(value => {
-                  return value.name.toLowerCase().includes(input)
+        getAllNations()
+              .then(res => {
+                const input = this.inputData.toLowerCase();
+                
+                const searchNation = res.data.filter(value => {
+                    return value.name.toLowerCase().includes(input)
+                });
+                this.$store.state.searchNationList = searchNation;
+              })
+              .catch(err => {
+                console.error(err);
               });
-              this.$store.state.searchNationList = searchNation;
-            })
-            .catch(err => {
-              console.error(err);
-            });
 
-      this.$router.replace(`/search/${this.inputData}`);
-      this.resetData();
+        this.$router.replace(`/search/${this.inputData}`)
+          .catch(err => {
+            if(err.name != "NavigationDuplicated" ){
+              throw error;
+            }
+          });
+        this.resetData();
     },
     resetData(){
       //this.inputData = '';
