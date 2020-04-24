@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <h5 class="myEmail">
-       Email: in11202@naver.com ★ Github: https://github.com/InJaEE/SimpleNationInfo
+       Email: in11202@naver.com ★ Github: github.com/InJaEE/SimpleNationInfo
     </h5> 
   </div>
 </template>

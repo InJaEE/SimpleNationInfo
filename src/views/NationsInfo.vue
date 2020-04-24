@@ -17,7 +17,7 @@
           Native name: {{getNation.nativeName}}
         </p>
         <div>
-          Languages: 
+          Languages
           <li v-for="item in getNation.languages" :key="item.nId">
             {{item.nativeName}}
           </li>
