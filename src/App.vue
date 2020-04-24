@@ -28,6 +28,24 @@ export default {
 body {
   text-align: center;
 }
+.nationList {
+  display: flex;
+  width: 1010px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row; 
+}
+.nationItem {
+  width:200px;
+  margin: 0px 15px 30px;
+}
+.nationImg {
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+  color: #646464;
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }

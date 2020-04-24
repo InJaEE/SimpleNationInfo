@@ -29,20 +29,4 @@ export default {
 </script>
 
 <style scoped>
-.nationList {
-  width: 1010px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; 
-}
-
-.nationItem {
-  width:200px;
-  margin: 0px 15px 30px;
-}
-
-.nationImg {
-  margin-bottom: 0px;
-}
 </style>
