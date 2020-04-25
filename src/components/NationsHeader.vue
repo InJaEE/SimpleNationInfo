@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-      <a href="/nations">
+      <router-link to="/nation">
         <h1>Simple Nation Information</h1>
-      </a>
+      </router-link>
   </div>
 </template>
 
