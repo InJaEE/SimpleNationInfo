@@ -6,11 +6,11 @@ const config = {
 
 function getAllNations(){
     return axios.get(`${config.baseUrl}all`);
-};
+}
 
 function getOneNation(nationCode){
     return axios.get(`${config.baseUrl}alpha/${nationCode}`);
-};
+}
 
 export {
     getAllNations,

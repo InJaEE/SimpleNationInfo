@@ -6,7 +6,6 @@
         </p>
         <table class="tableStyle">
           <tbody>
-            <!--{{getNation}}-->
             <tr>
               <th>Name</th>
               <th>{{getNation.name}}</th>
@@ -31,13 +30,9 @@
                 </li>
               </th>
             </tr>
-
-
           </tbody>
         </table>
-
       </div>
-
     <i class="fas fa-arrow-left fa-2x btn" @click="backToList"></i>
   </div>
 </template>

@@ -21,12 +21,10 @@ export default {
       nationsList: [],
     }
   },
-  methods: {
-  },
   created(){
     getAllNations()
       .then(res => {
-        this.$store.state.nationList = res.data; // 추후 store쪽으로 수정 필요한 코드
+        this.$store.state.nationList = res.data;
         this.nationsList = res.data;
       })
       .catch(err => {
@@ -35,6 +33,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>

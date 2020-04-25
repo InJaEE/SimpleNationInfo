@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { getAllNations } from '../api';
 export default {
     computed: {
         nationsList(){
@@ -30,23 +29,7 @@ export default {
         if(this.nationsList.length === 0){
             const param = this.$route.params.input;
             this.$store.dispatch('FETCH_SEARCH_NATION', param);
-            /*getAllNations()
-              .then(res => {
-                const input = param.toLowerCase();
-                
-                const searchNation = res.data.filter(value => {
-                    return value.name.toLowerCase().includes(input)
-                });
-                this.$store.state.searchNationList = searchNation;
-              })
-              .catch(err => {
-                console.error(err);
-              });*/
-
-        };
+        }
     }
 };
 </script>
-
-<style scoped>
-</style>

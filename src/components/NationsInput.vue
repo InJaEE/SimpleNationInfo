@@ -6,7 +6,6 @@
 </template>
 
 <script>
-//import { getAllNations } from '../api';
 export default {
   data(){
     return{
@@ -20,20 +19,6 @@ export default {
           return;
         }
         this.$store.dispatch('FETCH_SEARCH_NATION', this.inputData);
-        /*
-        getAllNations()
-              .then(res => {
-                const input = this.inputData.toLowerCase();
-                
-                const searchNation = res.data.filter(value => {
-                    return value.name.toLowerCase().includes(input)
-                });
-                this.$store.state.searchNationList = searchNation;
-              })
-              .catch(err => {
-                console.error(err);
-              });*/
-
         this.$router.replace(`/search/${this.inputData}`)
           .catch(err => {
             if(err.name != "NavigationDuplicated" ){

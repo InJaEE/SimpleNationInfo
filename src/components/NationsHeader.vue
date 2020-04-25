@@ -6,12 +6,6 @@
   </div>
 </template>
 
-<script>
-export default {
-
-};
-</script>
-
 <style scoped>
 .header {
   background-color: cornflowerblue;
