@@ -41,6 +41,7 @@ export default {
 }
 .searchBtn {
   padding: 5px 15px 5px;
+  cursor: pointer;
 }
 input[type=text], select {
   padding: 12px 20px;

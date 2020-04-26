@@ -32,7 +32,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div><br>
     <i class="fas fa-arrow-left fa-2x btn" @click="backToList"></i>
   </div>
 </template>
@@ -73,6 +73,7 @@ li {
   margin: 10px;
 }
 .btn {
-  padding: 50px 10px 10px;
+  padding: 0;
+  cursor: pointer;  
 }
 </style>
