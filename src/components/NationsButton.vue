@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topBtn">
-      <a href="#" @click="scrollTo(0,0)">
+      <a href="#">
         <i class="fas fa-arrow-circle-up fa-3x"></i>
       </a>
     </div>
