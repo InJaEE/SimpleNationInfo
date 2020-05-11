@@ -30,7 +30,7 @@ body {
 }
 .nationList {
   display: flex;
-  width: 1010px;
+  width: 50%;
   margin: 0 auto;
   flex-wrap: wrap;
   flex-direction: row; 
